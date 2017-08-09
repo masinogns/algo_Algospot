@@ -34,7 +34,7 @@ public class code4_3_mine {
     public static void main(String[] args) {
         code4_3_mine application = new code4_3_mine();
 
-        ArrayList inputArrayList = new ArrayList(Arrays.asList(9.3,8.1,7.7,4.4,1.1,6.4,4.4,7.2));
+        ArrayList<Double> inputArrayList = new ArrayList(Arrays.asList(9.3,8.1,7.7,4.4,1.1,6.4,4.4,7.2));
         int M = 2;
 
         application.setSaveArrayList(inputArrayList);

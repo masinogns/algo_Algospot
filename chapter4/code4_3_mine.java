@@ -32,9 +32,9 @@ public class code4_3_mine {
     }
 
     public static void main(String[] args) {
-
         run();
     }
+
     public static void run(){
         code4_3_mine application = new code4_3_mine();
 

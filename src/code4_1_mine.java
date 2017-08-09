@@ -18,10 +18,10 @@ import java.util.Random;
  * inputArray   : 주어진 배열
  * saveArray    : 등장하는 숫자의 횟수를 저장하는 배열
  */
-public class code4 {
+public class code4_1_mine {
     int[] saveArray, inputArray;
 
-    public code4() {
+    public code4_1_mine() {
         saveArray = new int[10];
     }
 
@@ -30,7 +30,7 @@ public class code4 {
     }
 
     static void run() {
-        code4 application = new code4();
+        code4_1_mine application = new code4_1_mine();
 
 //        application.setInputArray(application.initInputArray(10));
         int[] array = {1,2,3,4,5,6,5,4,4,0,6,6,6,6};

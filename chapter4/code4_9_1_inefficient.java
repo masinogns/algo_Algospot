@@ -4,7 +4,7 @@ import java.util.Arrays;
 /**
  * Created by masinogns on 2017. 8. 9..
  *
- * 최대 연속 부분 구간 합 문제 : 무식하게 풀기
+ * 최대 연속 부분 구간 합 문제 : 무식하게 풀기 = brute-force
  * 배열의 모든 부분 구간을 순회하면서 그 합을 계산한다
  *
  * 시간 복잡도 N^3 o(N^2)개의 후보 구간을 검사하고 o(N)번의 각 구간의 합을 구하는데 걸린다
@@ -15,7 +15,7 @@ import java.util.Arrays;
  * for // 구간 i..j 더하기
  *
  */
-public class code4_9_1 {
+public class code4_9_1_inefficient {
     public static void main(String[] args) {
         ArrayList<Integer> integerArrayList = new ArrayList<>(
                 Arrays.asList(-7, 4, -3, 6, 3, -8, 3, 4)

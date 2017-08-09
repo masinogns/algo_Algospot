@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 시간 복잡도 : O(N^2)
  *
  */
-public class code4_9_2 {
+public class code4_9_2_better {
     public static void main(String[] args) {
         ArrayList<Integer> integerArrayList = new ArrayList<>(
                 Arrays.asList(-7, 4, -3, 6, 3, -8, 3, 4)

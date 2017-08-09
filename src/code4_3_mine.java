@@ -32,6 +32,10 @@ public class code4_3_mine {
     }
 
     public static void main(String[] args) {
+
+        run();
+    }
+    public static void run(){
         code4_3_mine application = new code4_3_mine();
 
         ArrayList<Double> inputArrayList = new ArrayList(Arrays.asList(9.3,8.1,7.7,4.4,1.1,6.4,4.4,7.2));
@@ -40,10 +44,9 @@ public class code4_3_mine {
         application.setSaveArrayList(inputArrayList);
         application.calculAverageMovingForM(application.getAverageMovingOfM(), application.getSaveArrayList(), 2);
         application.resultAverageMoving(application.getAverageMovingOfM());
-
     }
 
-    private void resultAverageMoving(ArrayList<Double> averageMovingOfM) {
+    public void resultAverageMoving(ArrayList<Double> averageMovingOfM) {
 
         Iterator iterator = averageMovingOfM.iterator();
         while (iterator.hasNext()){
@@ -51,7 +54,7 @@ public class code4_3_mine {
         }
     }
 
-    private void calculAverageMovingForM(ArrayList<Double> averageMovingOfM, ArrayList<Double> saveArrayList, int M) {
+    public void calculAverageMovingForM(ArrayList<Double> averageMovingOfM, ArrayList<Double> saveArrayList, int M) {
         int N = saveArrayList.size();
 
         // 몇개를 묶을 수 있는지

@@ -19,8 +19,7 @@ import java.util.Random;
  * saveArray    : 등장하는 숫자의 횟수를 저장하는 배열
  */
 public class code4 {
-    ArrayList<Integer> inputArray;
-    int[] saveArray;
+    int[] saveArray, inputArray;
 
     public code4() {
         saveArray = new int[10];
@@ -33,47 +32,15 @@ public class code4 {
     static void run() {
         code4 application = new code4();
 
-        application.initInputArray(10);
+//        application.setInputArray(application.initInputArray(10));
+        int[] array = {1,2,3,4,5,6,5,4,4,0,6,6,6,6};
+        application.setInputArray(array);
         application.addIndexNumber(application.getInputArray());
         application.findBiggestNumber(application.getSaveArray());
     }
 
-    private void findBiggestNumber(int[] save) {
-        int max = 0;    // value가 max일 때의 index 저장할 곳
-
-        // value의 값이 max인 index 찾기
-        for (int i = 0; i < save.length; i++){
-//            System.out.println(i+" : "+save[i]);
-
-            if (save[max] < save[i]){
-                max = i;
-            }
-        }
-
-        System.out.println("It is biggest number : " + max);
-    }
-
-    private void addIndexNumber(ArrayList array) {
-        // convert ArrayList to int[] using Iterator
-        int[] inputArray = new int[array.size()];
-        for (int i = 0; i < array.size(); i++){
-            inputArray[i] = (int)array.get(i);
-        }
-
-
-        for (int i : inputArray){
-            saveArray[i] += 1;
-        }
-
-        // saveArray 출력하는 곳
-        System.out.println("");
-        for (int i : saveArray){
-            System.out.print(i+" ");
-        }
-    }
-
-    private void initInputArray(int number) {
-        inputArray = new ArrayList<>();
+    private int[] initInputArray(int number) {
+        ArrayList inputArray = new ArrayList<>();
         Random randomGenerator = new Random();
 
         int random = 0;
@@ -84,14 +51,41 @@ public class code4 {
             inputArray.add(i, random);
         }
 
-        for (int i : inputArray){
-            System.out.print(i + " ");
+        // convert ArrayList to int[] using Iterator
+        int[] inputArrayInteger = new int[inputArray.size()];
+        for (int i = 0; i < inputArray.size(); i++){
+            inputArrayInteger[i] = (int)inputArray.get(i);
         }
 
+        return inputArrayInteger;
     }
 
-    public ArrayList<Integer> getInputArray() {
+    private void addIndexNumber(int[] array) {
+        // add Index number when same inputArray value == saveArray index
+        for (int i : inputArray){
+            saveArray[i] += 1;
+        }
+    }
+
+    private void findBiggestNumber(int[] save) {
+        int max = 0;    // value가 max일 때의 index 저장할 곳
+
+        // value의 값이 max인 index 찾기
+        for (int i = 0; i < save.length; i++){
+            if (save[max] < save[i]){
+                max = i;
+            }
+        }
+
+        System.out.println("It is biggest number : " + max);
+    }
+
+    public int[] getInputArray() {
         return inputArray;
+    }
+
+    public void setInputArray(int[] inputArray) {
+        this.inputArray = inputArray;
     }
 
     public int[] getSaveArray() {

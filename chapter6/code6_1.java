@@ -16,7 +16,7 @@ public class code6_1 {
 //        System.out.println(recursiveSumValue);
     }
 
-    public int recursiveSum(int until) {
+    public int iteratorSum(int until) {
         int ret = 0;
 
         for (int i = 1; i <= until; i++){
@@ -25,7 +25,7 @@ public class code6_1 {
         return ret;
     }
 
-    public int iteratorSum(int until) {
+    public int recursiveSum(int until) {
         if (until == 1) return 1;
         return until + recursiveSum(until - 1);
     }

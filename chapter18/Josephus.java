@@ -12,14 +12,6 @@ public class Josephus {
     private int removeIndex;
     private LinkedList<Integer> people;
     private ArrayList<Integer> josephusPermutation;
-    private ArrayList josephusPermutationLastIndexOfTwo;
-
-    public Josephus() {
-        people = new LinkedList();
-
-        josephusPermutation = new ArrayList();
-        josephusPermutationLastIndexOfTwo = new ArrayList();
-    }
 
     public void setPeopleNumber(int peopleNumber) {
         this.peopleNumber = peopleNumber;
@@ -38,12 +30,15 @@ public class Josephus {
     }
 
     public void setPeopleList(int peopleNumber) {
+        people = new LinkedList();
+
         for (int i = 0; i < peopleNumber; i ++){
             people.add(i, i+1);
         }
     }
 
     public void setJosephusPermutation(int removeIndex) {
+        josephusPermutation = new ArrayList();
 
         people.remove(0);
 
@@ -62,6 +57,7 @@ public class Josephus {
 
             removeIndex += minus;
             size -= 1;
+
         }
     }
 
@@ -72,7 +68,29 @@ public class Josephus {
         return result;
     }
 
+    public static void main(String[] args) {
+        Josephus application = new Josephus();
 
+        Scanner scanner = new Scanner(System.in);
+        int a, b, testcase;
+        testcase = scanner.nextInt();
 
+        while (testcase > 0){
 
+        a = scanner.nextInt();
+        b = scanner.nextInt();
+
+        application.setPeopleNumber(a);
+        application.setRemoveIndex(b);
+
+        application.setPeopleList(application.getPeopleNumber());
+        application.setJosephusPermutation(application.getRemoveIndex());
+
+        ArrayList<Integer> arrayList = application.getJosephusPermutationLastIndexOfTwo();
+
+        System.out.println(arrayList.get(0)+" "+arrayList.get(1));
+
+        testcase--;
+        }
+    }
 }

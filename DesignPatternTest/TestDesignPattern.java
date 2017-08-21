@@ -32,5 +32,27 @@ public class TestDesignPattern {
         assertEquals(40.0, adapter.halfOf(80f), 0.0f);
     }
 
+    @Test
+    public void template(){
+        AbstGameConnectionHelper helper = new DefaultGameConnection();
+
+        String info = "info";
+        helper.requestConnection(info);
+    }
+
+    @Test
+    public void factorty(){
+        ItemCreator creator;
+        Item item;
+
+        creator = new HpCreator();
+        item = creator.create();
+        item.use();
+
+        creator = new MpCreator();
+        creator.create();
+        item.use();
+    }
+
 
 }

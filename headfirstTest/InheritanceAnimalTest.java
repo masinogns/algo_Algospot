@@ -3,7 +3,7 @@ import org.junit.Test;
 /**
  * Created by masinogns on 2017. 8. 14..
  */
-public class AnimalTest {
+public class InheritanceAnimalTest {
     @Test
     public void test(){
 

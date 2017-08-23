@@ -21,6 +21,9 @@
       <sourceFolder url="file://$MODULE_DIR$/DesignPatterns/Singleton" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/headfirst/Inheritance" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/headfirstTest" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/headfirst/Introduction/baseUsingAbst" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/headfirst/Introduction/UsingInterface" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/headfirst/Introduction" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

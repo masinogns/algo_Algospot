@@ -1,3 +1,5 @@
+package InterfaceExamples;
+
 /**
  * Created by masinogns on 2017. 8. 19..
  */

@@ -1,9 +1,7 @@
 import _2_UsingInterfaces.ImplMallardDuckClass;
-import _3_UsingDesignPattern.DuckBaseClass;
-import _3_UsingDesignPattern.MallardDuck;
+import _3_UsingDesignPatternStrategy.DuckBaseClass;
+import _3_UsingDesignPatternStrategy.MallardDuck;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by masinogns on 2017. 8. 23..

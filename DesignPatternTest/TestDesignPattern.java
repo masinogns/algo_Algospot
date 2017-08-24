@@ -1,3 +1,12 @@
+import Adapters.Adapter;
+import Adapters.AdapterImpl;
+import _State.Light;
+import _Strategys.Axe;
+import _Strategys.GameCharater;
+import _Strategys.Knife;
+import _Strategys.Sword;
+import TemplateMethods.AbstGameConnectionHelper;
+import TemplateMethods.DefaultGameConnection;
 import org.junit.Test;
 import static org.junit.Assert.*;
 /**
@@ -16,6 +25,24 @@ public class TestDesignPattern {
         gameCharater.setWeapon(new Axe());
         gameCharater.attack();
 
+    }
+
+    @Test
+    public void state(){
+        Light light = new Light();
+
+        light.off();
+        light.off();
+        light.off();
+
+        light.on();
+        light.on();
+        light.on();
+
+        light.off();
+        light.on();
+        light.off();
+        light.on();
     }
 
     @Test
@@ -53,6 +80,7 @@ public class TestDesignPattern {
         creator.create();
         item.use();
     }
+
 
 
 }

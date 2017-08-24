@@ -1,4 +1,4 @@
-package _3_UsingDesignPattern;
+package _3_UsingDesignPatternStrategy;
 
 /**
  * Created by masinogns on 2017. 8. 23..
